@@ -4,7 +4,10 @@ import * as dayjs from 'dayjs';
 import timezone from 'dayjs/plugin/timezone';
 import utc from 'dayjs/plugin/utc';
 import {createRoot} from 'react-dom/client';
+import {Provider} from 'react-redux';
 import {getRootContainer} from 'utils/helpers';
+
+import {store} from './redux/store';
 
 import './styles/root.scss';
 
@@ -15,6 +18,8 @@ const root = createRoot(getRootContainer());
 
 root.render(
     <React.StrictMode>
-        <App />
+        <Provider store={store}>
+            <App />
+        </Provider>
     </React.StrictMode>,
 );

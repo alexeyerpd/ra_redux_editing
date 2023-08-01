@@ -1,0 +1,25 @@
+@use 'styles/variables';
+
+$block: '.#{variables.$ns}service-form';
+
+#{$block} {
+    display: flex;
+
+    &__input {
+        padding-inline: 10px;
+        padding-block: 5px;
+
+        font-size: 16px;
+
+        outline: none;
+    }
+
+    &__btn {
+        padding-inline: 10px;
+        padding-block: 5px;
+
+        font-weight: 700;
+
+        cursor: pointer;
+    }
+}
